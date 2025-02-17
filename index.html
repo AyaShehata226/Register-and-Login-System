@@ -19,10 +19,10 @@
 <script>
     const userEmailElement = document.getElementById('user-email');
     const storedEmail = localStorage.getItem('email');
-    if (storedEmail) {
-        userEmailElement.textContent = storedEmail;
+    if (!storedEmail) {
+        window.location.href = '../src/Login/Login.html';
     } else {
-        userEmailElement.textContent = 'No email found';
+        userEmailElement.textContent = storedEmail;
     }
     const logOut = function () {
         const confirmLogout = confirm("Are you sure you want to log out?");
@@ -30,7 +30,7 @@
             localStorage.removeItem('email');
             localStorage.removeItem('password');
             localStorage.removeItem('username');
-            window.location.href = '../src/Login/Login.html';
+            window.location.href = './src/Login/Login.html';
         }
     };
 </script>
