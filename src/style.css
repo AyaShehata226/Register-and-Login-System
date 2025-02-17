@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    list-style:none;
+    text-decoration:none;
+}
+.register{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+    margin-top: 40px;
+}
+.login{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+    margin-top: 40px;
+}
+.image{
+    flex: 1;
+    text-align: end;
+}
+.image img{
+    max-width: 100%;
+    height: auto;
+}
+.form{
+    flex:1;
+    padding: 20px 10px;
+}
+.form form{
+    max-width: 400px;
+    padding: 10px;
+    margin: auto;
+    border-radius: 5px;
+    justify-items:start ;
+}
+.form div {
+    margin-top: 10px; 
+    text-align: center; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+.form div a {
+    color: rgb(93, 93, 252); /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;
+}
+
+.form div a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+.form form label{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2px;
+}
+.form form input{
+    width: 100%;
+    height: 50px;
+    padding: 5px;
+    border:1px solid rgb(218, 208, 208);
+    margin:10px 0;
+    border-radius: 5px;
+    outline-color: rgb(93, 93, 252);
+}
+.form form input[type="submit"]{
+    background-color: rgb(93, 93, 252);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: large;
+}
+.welcomePage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.welcomePage h1{
+font-family: Arial, Helvetica, sans-serif;
+font-size: 2rem;
+text-align: center;
+font-style: italic;
+font-weight: 600;
+}

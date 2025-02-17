@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../output.css">
+    <title>Login Page</title>
+</head>
+<body class="md:bg-white bg-gradient-to-r from-white to-blue-500/80">
+    <div class="login">
+        <div class="image hidden md:flex">
+            <img src="../images/login.svg" alt="login"/>
+        </div>
+        <div class="form">
+            <h2 class="items-center text-center font-bold text-blue-700 text-3xl mb-4 italic">Login</h2>
+            <form method="post" onsubmit="handleSubmit(event)">
+                <label for="email">E-mail</label><br>
+                <input type="text" id="email" name="email"  placeholder="E-mail"><br>
+                <label for="password">Password</label><br>
+                <input type="password" id="password" name="password" placeholder="password" required><br>
+                <input type="submit" value="Login">
+            </form>
+            <div> Don't have an account<span>?</span><a href="../Register/Register.html">Sing UP</a></div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
