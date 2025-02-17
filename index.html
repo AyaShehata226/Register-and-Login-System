@@ -5,33 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/style.css">
     <link rel="stylesheet" href="./src/output.css">
-    <title>Welcome Page</title>
+    <title>Register</title>
 </head>
-<body>
-    <div class="p-3 flex justify-between border shadow shadow-slate-200 fixed w-full">
-        <span id="user-email">Aau@gmail.com</span>
-        <button onclick="logOut()" class="border-2 rounded-md hover:bg-red-600 p-2 bg-red-500 text-white" type="button">LogOut</button>
+<body class=" lg:bg-white bg-gradient-to-r from-white to-blue-300/80">
+    <div class="register">
+        <div class="image hidden md:flex">
+            <img src="./src/images/register.svg" alt="login"/>
+        </div>
+        <!-- login form -->
+        <div class="form">
+            <h2 class="items-center text-center font-bold text-blue-700 text-3xl mb-4 italic">Sing UP</h2>
+            <form method="post" onsubmit="handleSubmit(event)">
+                <label for="username">Username</label><br>
+                <input type="text" id="username" name="username" placeholder="Username" required><br>
+                <label for="email">E-mail</label><br>
+                <input type="text" id="email" name="email"  placeholder="E-mail"><br>
+                <label for="password">Password</label><br>
+                <input type="password" id="password" name="password" placeholder="password" required><br>
+                <label for="confirmPassword">Confirm Password</label><br>
+                <input type="password" id="confirmPassword" placeholder="confirmPassword" name="confirmPassword" required><br>
+                <input type="submit" value="Register">
+            </form>
+            <div>Already have an account<span>?</span><a href="./src/Login/Login.html">Login</a></div>
+        </div>
     </div>
-    <div class="welcomePage">
-        <h1>Welcome to my website!</h1>
-    </div>
+    <script src="./index.js"></script>
 </body>
-<script>
-    const userEmailElement = document.getElementById('user-email');
-    const storedEmail = localStorage.getItem('email');
-    if (!storedEmail) {
-        window.location.href = '../src/Login/Login.html';
-    } else {
-        userEmailElement.textContent = storedEmail;
-    }
-    const logOut = function () {
-        const confirmLogout = confirm("Are you sure you want to log out?");
-        if (confirmLogout) {
-            localStorage.removeItem('email');
-            localStorage.removeItem('password');
-            localStorage.removeItem('username');
-            window.location.href = './src/Login/Login.html';
-        }
-    };
-</script>
 </html>

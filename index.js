@@ -58,7 +58,7 @@ function handleSubmit(event) {
             localStorage.setItem("email", emailInput.value);
             localStorage.setItem("password", passwordInput.value);
             // Redirect to Login page
-            window.location.href = "../Login/Login.html";
+            window.location.href = "./src/Login/Login.html";
         }
     } else {
         alert("Please fill all fields correctly.");

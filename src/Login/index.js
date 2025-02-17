@@ -17,7 +17,7 @@ function handleSubmit(event) {
         passwordInput.value.trim() === storedPassword
     ) {
         alert("Login successful!");
-        window.location.href = "../../index.html";
+        window.location.href = "../index.html";
     } else {
         alert("Invalid email or password. Please try again.");
     }
